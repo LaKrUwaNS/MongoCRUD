@@ -1,8 +1,32 @@
 @import "tailwindcss";
+/*---break---*/
+@plugin "tailwindcss-animate";
+/*---break---*/
+@custom-variant dark (&:is(.dark *));
 @import "tailwindcss/utilities";
 
 /*@plugin "daisyui";*/
-*{
+* {
   margin: 0;
   padding: 0;
+}
+
+/*Animations Handwriten*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(100%, 100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.neanimatio{
+  animation: fadeIn 0.5s ease-in-out;
+}
+.non{
+  animation: none;
 }
